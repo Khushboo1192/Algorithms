@@ -2,9 +2,8 @@
 # n is the number of vertices
 # weights is a list of their weights, v_1, ..., v_n
 def mwis (n, weights):
-    #
-    #FILL IN CODE HERE
-    #
+   
+   #initializing arrays 
     opt=[];
     sol_tot_weight=0;
     sol_items=[];
@@ -13,7 +12,6 @@ def mwis (n, weights):
     set_temp=[];
 
     opt.append(weights[0]);
-
     set_prev.append(1);
 
     if opt.__getitem__(0) > weights[1] :
@@ -68,9 +66,6 @@ def mwis (n, weights):
     sol_tot_weight=opt[n-1];
     return (opt, sol_tot_weight, sorted(sol_items))
 
-
-#YOU DO NOT NEED TO CHANGE THE CODE BELOW THIS LINE
-
 #Read input
 f = open("input.txt", "r")
 weights = [int(x) for x in f.readline().split()]
@@ -80,6 +75,6 @@ n = len (weights)
 (opt, sol_tot_weight, sol_items) = mwis(n, weights)
 
 #output solution
-#print ' '.join(map(str, opt))
-#print sol_tot_weight
-#print ' '.join(map(str, sol_items))
+print ' '.join(map(str, opt))
+print sol_tot_weight
+print ' '.join(map(str, sol_items))
