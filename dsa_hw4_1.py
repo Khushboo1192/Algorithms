@@ -38,27 +38,27 @@ def mwis (n, weights):
             set_curr.append(0);
         else :
             opt.append(temp);
-            print'$$$$$$$$$$$$$$$$$'
-            print 'printing prev array',set_prev;
-            print 'printing curr array',set_curr;
+            #print'$$$$$$$$$$$$$$$$$'
+            #print 'printing prev array',set_prev;
+            #print 'printing curr array',set_curr;
 
             set_temp=set_curr[:];
             set_curr=set_prev[:];
-            print 'printing curr array1',set_curr;
-            print 'printing temp array1',set_temp;
+            #print 'printing curr array1',set_curr;
+            #print 'printing temp array1',set_temp;
             set_curr.append(0);
             set_curr.append(1);
-            print 'printing curr array2',set_curr;
+            #print 'printing curr array2',set_curr;
             set_prev=set_temp[:];
             del set_temp;
-            print 'printing prev array3',set_prev;
-            print 'printing curr array3',set_curr;
-        print 'printing opt array '
-        print ' '.join(map(str, opt));
-        print 'printing prev array';
-        print ' '.join(map(str,set_prev)) ;
-        print 'printing curr array';
-        print ' '.join(map(str,set_curr)) ; print '###############################################'
+            #print 'printing prev array3',set_prev;
+            #print 'printing curr array3',set_curr;
+        #print 'printing opt array '
+        #print ' '.join(map(str, opt));
+        #print 'printing prev array';
+        #print ' '.join(map(str,set_prev)) ;
+        #print 'printing curr array';
+        #print ' '.join(map(str,set_curr)) ; print '###############################################'
 
     for j in range(0,n):
         temp2=set_curr[j];
@@ -80,6 +80,6 @@ n = len (weights)
 (opt, sol_tot_weight, sol_items) = mwis(n, weights)
 
 #output solution
-print ' '.join(map(str, opt))
-print sol_tot_weight
-print ' '.join(map(str, sol_items))
+#print ' '.join(map(str, opt))
+#print sol_tot_weight
+#print ' '.join(map(str, sol_items))
